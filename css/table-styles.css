@@ -1,0 +1,74 @@
+.table-section {
+    margin-bottom: 20px;
+}
+
+.table-section h3 {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 0;
+    position: relative;
+    transition: background-color 0.3s;
+    font-weight: normal;
+}
+
+.table-section h3:hover {
+    background-color: #444;
+}
+
+.table-section h3::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+}
+
+.table-section h3.collapsed::after {
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.table-section table {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.table-section table.show {
+    display: table;
+}
+
+.table-section table th,
+.table-section table td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: left;
+    color: #fff;
+}
+
+.table-section table th {
+    background-color: #1a1a1a;
+    font-weight: normal;
+    color: #999;
+    border-bottom: 1px solid #333;
+}
+
+.table-section table td {
+    background-color: #1a1a1a;
+}
+
+.table-section table tr:hover td {
+    background-color: #262626;
+}
+
+.work-table {
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+} 

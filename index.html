@@ -4,83 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ТОВ «АТОМЕНЕРГОПРОЕКТ»</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .table-section {
-            margin-bottom: 20px;
-        }
-        
-        .table-section h3 {
-            cursor: pointer;
-            padding: 10px 15px;
-            background-color: #333;
-            color: white;
-            border-radius: 4px 4px 0 0;
-            margin-bottom: 0;
-            position: relative;
-            transition: background-color 0.3s;
-            font-weight: normal;
-        }
-        
-        .table-section h3:hover {
-            background-color: #444;
-        }
-        
-        .table-section h3::after {
-            content: '▼';
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: transform 0.3s;
-        }
-        
-        .table-section h3.collapsed::after {
-            transform: translateY(-50%) rotate(-90deg);
-        }
-        
-        .table-section table {
-            display: none;
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 0;
-            background-color: #1a1a1a;
-            color: #fff;
-        }
-        
-        .table-section table.show {
-            display: table;
-        }
-        
-        .table-section table th,
-        .table-section table td {
-            border: 1px solid #333;
-            padding: 12px;
-            text-align: left;
-            color: #fff;
-        }
-        
-        .table-section table th {
-            background-color: #1a1a1a;
-            font-weight: normal;
-            color: #999;
-            border-bottom: 1px solid #333;
-        }
-        
-        .table-section table td {
-            background-color: #1a1a1a;
-        }
-        
-        .table-section table tr:hover td {
-            background-color: #262626;
-        }
-        
-        .work-table {
-            background-color: #1a1a1a;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/table-styles.css">
 </head>
 <body>
     <header>
@@ -88,11 +13,10 @@
             <h1>ТОВ «АТОМЕНЕРГОПРОЕКТ»</h1>
         </div>
     </header>
-
     <section class="hero">
         <div class="hero-content">
             <div class="hero-logo">
-                <img src="logo.png" alt="АТОМ ЕНЕРГО ПРОЕКТ" class="logo">
+                <img src="assets/images/logo/logo.png" alt="АТОМ ЕНЕРГО ПРОЕКТ" class="logo">
             </div>
             <div class="hero-text">
                 <h2>БУДІВНИЦТВО</h2>
@@ -100,8 +24,6 @@
             </div>
         </div>
     </section>
-
-
     <main>
         <div class="container">
             <section class="services-grid">
@@ -146,7 +68,7 @@
                 </div>
                 <div class="wind-map-image">
                     <div class="map-container">
-                        <img src="/ukraine-wind-map.png" alt="Карта вітрових електростанцій України" class="ukraine-map">
+                        <img src="assets/images/maps/ukraine-wind-map.png" alt="Карта вітрових електростанцій України" class="ukraine-map">
                         <div class="map-legend">
                             <p>Вітрові станції України, станом на кінець 2021 року</p>
                             <div class="legend-items">
@@ -204,6 +126,75 @@
         </div>
     </section>
 
+    <section class="work-types">
+        <div class="container">
+            <h2>Ми виконували наступні види робіт:</h2>
+            <div class="work-types-grid">
+                <div class="work-type-card">
+                    <div class="work-type-number">1</div>
+                    <div class="work-type-text">Підготовка будівельного майданчика</div>
+                </div>
+                <div class="work-type-card">
+                    <div class="work-type-number">2</div>
+                    <div class="work-type-text">Земляні роботи</div>
+                </div>
+                <div class="work-type-card">
+                    <div class="work-type-number">3</div>
+                    <div class="work-type-text">Армування та бетонування фундаменту</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wind-turbines-gallery">
+        <div class="container">
+            <h2>Референс-лист</h2>
+            <div class="turbines-grid">
+                <!-- Перша частина галереї - будівництво фундаменту -->
+                <div class="turbine-item">
+                    <img src="assets/images/technical/10.jpg" alt="Земляні роботи">
+                </div>
+                <div class="turbine-item">
+                    <img src="assets/images/technical/11.jpg" alt="Підготовка майданчика">
+                </div>
+                <div class="turbine-item">
+                    <img src="assets/images/technical/12.jpg" alt="Будівництво фундаменту">
+                </div>
+                <div class="turbine-item">
+                    <img src="assets/images/technical/13.jpg" alt="Монтаж конструкцій">
+                </div>
+                <div class="turbine-item">
+                    <img src="assets/images/technical/14.jpg" alt="Армування фундаменту">
+                </div>
+                <div class="turbine-item">
+                    <img src="assets/images/technical/15.jpg" alt="Завершальні роботи">
+                </div>
+            </div>
+
+            <div class="turbines-grid second-grid">
+                <!-- Друга частина галереї - монтаж вітрогенераторів -->
+                <div class="turbine-item">
+                    <img src="assets/images/technical/17.jpg" alt="Монтаж вітрогенератора">
+                </div>
+                <div class="turbine-item">
+                    <img src="assets/images/technical/18.jpg" alt="Деталі вітрогенератора">
+                </div>
+                <div class="turbine-item">
+                    <img src="assets/images/technical/19.jpg" alt="Монтажні роботи">
+                </div>
+                <div class="turbine-item">
+                    <img src="assets/images/technical/20.jpg" alt="Обслуговування вітрогенератора">
+                </div>
+                <div class="turbine-item">
+                    <img src="assets/images/technical/21.jpg" alt="Встановлення компонентів">
+                </div>
+                <div class="turbine-item">
+                    <img src="assets/images/technical/22.jpg" alt="Завершений монтаж">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
     <section class="work-complex">
         <div class="container">
             <h2>Комплекс робіт з встановлення вітрогенераторів 4 шт в Одеській області</h2>
@@ -288,7 +279,7 @@
                             </tr>
                             <tr>
                                 <td>6</td>
-                                <td>Бетонування підбетонки 100 мм</td>
+                                <td>Бетонування підбетонки 100мм</td>
                                 <td>м²</td>
                                 <td>2304</td>
                                 <td></td>
@@ -324,7 +315,7 @@
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>Армування каркасу фундаментної плити «стирьох рівневий каркас з посиленням</td>
+                                <td>Армування каркасу фундаментної плити чотирьох рівневий каркас з посиленням</td>
                                 <td>м³</td>
                                 <td>9072</td>
                                 <td>Армування згідно проекту з врахуванням посилень</td>
@@ -352,7 +343,7 @@
                             </tr>
                             <tr>
                                 <td>7</td>
-                                <td>Бетонування Фундаменту (Бетон С30/35 гідрофобна присадка)</td>
+                                <td>Бетонування фундаменту (Бетон С30/35 гідрофобна присадка)</td>
                                 <td>м³</td>
                                 <td>9072</td>
                                 <td>Виконати бетонування з врахуванням погодних умов, використання добавки для максимального ущільнення бетонної суміші</td>
@@ -391,7 +382,7 @@
                                 <td>Монтаж гондоли на верхівку башти на болтове з'єднання</td>
                                 <td>шт</td>
                                 <td>4</td>
-                                <td>Проводиться монтаж краном, після монтажж перевіряється обладнання</td>
+                                <td>Проводиться монтаж краном, після монтажу перевіряється обладнання</td>
                             </tr>
                             <tr>
                                 <td>4</td>
@@ -428,21 +419,526 @@
         </div>
     </section>
 
+    <section class="work-complex">
+        <div class="container">
+            <h2>Комплекс робіт з встановлення вітрогенераторів 7 шт в Покровському районі Донецької області</h2>
+            
+            <div class="work-table">
+                <div class="table-section">
+                    <h3>Підготовчі роботи</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Найменування</th>
+                                <th>Один. Вим.</th>
+                                <th>Кількість</th>
+                                <th>Примітки</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Нанесення проекту на місцевість геодезична посадка</td>
+                                <td>комплекс</td>
+                                <td>7</td>
+                                <td>Нанесення робочих точок паль та контуру фундаменту</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Перевірка ґрунтів геологія</td>
+                                <td>комплекс</td>
+                                <td>7</td>
+                                <td>Перевірка ґрунтів в місцях буріння паль та центральної частини</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Буріння паль (проведення випробувань паль)</td>
+                                <td>шт</td>
+                                <td>28</td>
+                                <td>Буріння паль та випробування паль на динамічні та статичні навантаження</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-section">
+                    <h3>Земельні роботи</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Розробка ґрунту під площу забудови з підсипними частинами використовуючи екскаватора-навантажувача JCB 4CX</td>
+                                <td>м²</td>
+                                <td>5488</td>
+                                <td>Підготовка площадки для проведення робіт, вирівнювання під робочу відмітку</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Буріння паль відносно проекту з врахування корегувань відносно ґрунту (БУРОНАБИВНІ ПАЛІ D=1020мм H=28000мм ) застосування Гідравлічний бурильний верстат RCQ560</td>
+                                <td></td>
+                                <td>168</td>
+                                <td>Проведення бурових робіт дизельною станцію на глубину 28 м</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Армування каркасів паль та бетонування</td>
+                                <td>м³</td>
+                                <td>5797,68</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Зачищення верхівок паль до проектної висоти</td>
+                                <td>шт</td>
+                                <td>196</td>
+                                <td>Проведення робіт з зачистки паль під проектну висоту та очищення випусків від бетону</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Улаштування піщано-щебеневого шару з пошаровим ущільненням та накриттям геотекстилю та ґрунт</td>
+                                <td>м²</td>
+                                <td>4032</td>
+                                <td>Закриття ґрунту геотекстилем та засипати пошарово пісок та щебінь з ущільненням для досягнення щільності основи</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Бетонування підбетонки 100мм</td>
+                                <td>м²</td>
+                                <td>4032</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Прокладання інженерних футлярів (Прокладання кабельної продукції в футлярі)</td>
+                                <td>комплекс</td>
+                                <td>7</td>
+                                <td>Прокладання кабельної продукції в футлярах до центру для подальшого прокладання</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-section">
+                    <h3>Бетонні роботи</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Геодезична розмітка фундаменту та анкерного каркасу</td>
+                                <td>комплекс</td>
+                                <td>7</td>
+                                <td>Розмітка Посадки анкерного каркасу та границь фундаменту</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Монтаж в приямок Анкерного каркасу вітрогенератора</td>
+                                <td>шт</td>
+                                <td>7</td>
+                                <td>Збір та монтаж анкерного каркасу який служить закладною для монтажу башти вітряка</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Армування каркасу фундаментної плити чотирьох рівневий каркас з посиленням</td>
+                                <td>м³</td>
+                                <td>15876</td>
+                                <td>Армування згідно проекту з врахуванням посилень</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Монтаж закладних деталей та випусків</td>
+                                <td>шт</td>
+                                <td>392</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Монтаж полоси заземлення</td>
+                                <td>м.п</td>
+                                <td>1680</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Монтаж опалубочних конструкцій з розкріпленням</td>
+                                <td>м³</td>
+                                <td>15876</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Бетонування фундаменту (Бетон С30/35 гідрофобна присадка)</td>
+                                <td>м³</td>
+                                <td>15876</td>
+                                <td>Виконати бетонування з врахуванням погодних умов, використання вібробулави для максимального ущільнення бетонної суміші</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Демонтаж опалубочних елементів</td>
+                                <td>Комплекс</td>
+                                <td>7</td>
+                                <td>Після набуття властивостей бетону проводиться демонтаж опалубочних елементів. Проводиться експертиза бетоного виробу</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-section">
+                    <h3>Монтаж вітрогенератора</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Збір крану для монтажу</td>
+                                <td>дні</td>
+                                <td>49</td>
+                                <td>Збір крану на місці монтажу( проведення розрахунку вантажо підйомності та висоти підйому)</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Монтаж башти сегментами 108м на болтове з'єднання (Закріплення основи до Анкерного каркасу та з'єднання модулів по 12м</td>
+                                <td>шт</td>
+                                <td>63</td>
+                                <td>Кріплення низу башти до анкерногокаркасу використовуючи гідроверт високої потужності та перевірка затягування динамометричним ключем. Монтаж подальших модулів проводиться за допомогою крану та кріпиться за середини башти</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Монтаж гондоли на верхівку башти на болтове з'єднання</td>
+                                <td>шт</td>
+                                <td>7</td>
+                                <td>Проводиться монтаж краном, після монтажу перевіряється обладнання</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Монтаж ковпака ротором до гондоли за допомогою болтового з'єднання</td>
+                                <td>шт</td>
+                                <td>7</td>
+                                <td>Монтується до гондоли за допомогою крану. Проводиться перевірка ротора</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Монтаж лопастей гвинта за допомогою болтового з'єднання</td>
+                                <td>шт</td>
+                                <td>21</td>
+                                <td>Монтаж проводиться краном всі елементи кріплення проходять випробування</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Монтаж додаткового обладнання</td>
+                                <td>комплекс</td>
+                                <td>7</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Проведення робіт з пусконалагодження вітрогенератора</td>
+                                <td>комплекс</td>
+                                <td>7</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="construction-stages">
+        <div class="container">
+            <h2>Етапи будівництва вітроелектростанції</h2>
+            <h3>Забивання паль</h3>
+            
+            <div class="technical-drawings">
+                <div class="drawing-item">
+                    <img src="assets/images/technical/23.png" alt="Схема розташування паль" class="technical-image">
+                    <p class="drawing-caption">Схема розташування паль</p>
+                </div>
+                <div class="drawing-item">
+                    <img src="assets/images/technical/24.png" alt="Інженерно-геологічний розріз площадки будівництва ВЕС" class="technical-image">
+                    <p class="drawing-caption">Інженерно-геологічний розріз площадки будівництва ВЕС</p>
+                </div>
+            </div>
+            
+            <div class="stage-section">
+                <h3>Улаштування фундаменту</h3>
+                <div class="technical-drawings">
+                    <div class="drawing-item">
+                        <img src="assets/images/technical/25.png" alt="Схема розташування арматури фундаменту" class="technical-image">
+                        <p class="drawing-caption">Схема розташування арматури фундаменту</p>
+                    </div>
+                    <div class="drawing-item">
+                        <img src="assets/images/technical/26.png" alt="Схема армування фундаменту" class="technical-image">
+                        <p class="drawing-caption">Схема армування фундаменту</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stage-section">
+                <h3>Схема розташування елементів</h3>
+                <div class="technical-drawings">
+                    <div class="drawing-item">
+                        <img src="assets/images/technical/27.png" alt="Схема розташування елементів фундаменту" class="technical-image">
+                        <p class="drawing-caption">Схема розташування елементів фундаменту (план)</p>
+                    </div>
+                    <div class="drawing-item">
+                        <img src="assets/images/technical/28.png" alt="Схема розташування елементів та закладних деталей" class="technical-image">
+                        <p class="drawing-caption">Схема розташування елементів та закладних деталей (розріз)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stage-section turbine-installation">
+                <h3>Встановлення турбіни</h3>
+                <div class="turbine-content">
+                    <div class="specs-table">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Номінальна потужність</td>
+                                    <td>3,83</td>
+                                </tr>
+                                <tr>
+                                    <td>Загальна висота</td>
+                                    <td>≈180 м (висота башти - 110 м, довжина лопаті - 67,2 м)</td>
+                                </tr>
+                                <tr>
+                                    <td>Вітровий клас</td>
+                                    <td>IEC IIB (вітровий ресурс - середній)</td>
+                                </tr>
+                                <tr>
+                                    <td>Висота башти</td>
+                                    <td>110 м</td>
+                                </tr>
+                                <tr>
+                                    <td>Діаметр ротору</td>
+                                    <td>137 м</td>
+                                </tr>
+                                <tr>
+                                    <td>Довжина лопаті</td>
+                                    <td>67,2 м</td>
+                                </tr>
+                                <tr>
+                                    <td>Кількість лопатей</td>
+                                    <td>3 шт</td>
+                                </tr>
+                                <tr>
+                                    <td>Швидкість вітру для запуску вітротурбіни</td>
+                                    <td>3 м/с</td>
+                                </tr>
+                                <tr>
+                                    <td>Максимальна швидкість краю лопатей</td>
+                                    <td>82,4 м/с</td>
+                                </tr>
+                                <tr>
+                                    <td>Максимальний порив (10 хв.) згідно з IEC 61400 1 (вид. 3) для стандартного діапазону</td>
+                                    <td>42,5 м/с</td>
+                                </tr>
+                                <tr>
+                                    <td>Тип фундаменту</td>
+                                    <td>пальовий</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="turbine-diagram">
+                        <img src="assets/images/technical/29.png" alt="Схема вітрової турбіни" class="technical-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="technical-base">
+        <div class="container">
+            <h2>Технічна база</h2>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <img src="assets/images/technical/33.jpg" alt="Технічна база підприємства" class="equipment-image">
+                </div>
+                <div class="equipment-info">
+                    <div class="equipment-list">
+                        <div class="equipment-group">
+                            <h3>Будівельна техніка</h3>
+                            <ul>
+                                <li>Автокран (1-25 метрів стріла)</li>
+                                <li>Автонавантажувач ковшовий</li>
+                                <li>Щогловий підйомник</li>
+                                <li>Екскаватор</li>
+                                <li>Екскаватор-навантажувач</li>
+                                <li>Бульдозер</li>
+                            </ul>
+                        </div>
+                        <div class="equipment-group">
+                            <h3>Бетонні роботи</h3>
+                            <ul>
+                                <li>Штукатурна станція (4 шт)</li>
+                                <li>Комплект збірно щитової опалубки (1640 м²)</li>
+                                <li>Бетононасос (Партнер, 6 шт)</li>
+                                <li>Обладнання для прогріву бетону (ТМО, 1 шт)</li>
+                                <li>Компресорна установка (8 шт)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="employees-stats">
+        <div class="stats-overlay">
+            <div class="container">
+                <h2>Загальна кількість робітників</h2>
+                
+                <div class="stats-grid">
+                    <div class="stats-card workers-list">
+                        <h3>Робітників, чол. у т.ч.<br>за спеціальностями</h3>
+                        <ul>
+                            <li><span>Комплексні бригади</span> <span class="number">11</span></li>
+                            <li><span>Монолітчики, бетонари</span> <span class="number">327</span></li>
+                            <li><span>Фасадчики</span> <span class="number">100</span></li>
+                            <li><span>Покрівельники</span> <span class="number">40</span></li>
+                            <li><span>Муляри</span> <span class="number">53</span></li>
+                            <li><span>Маляри</span> <span class="number">125</span></li>
+                            <li><span>Штукатури</span> <span class="number">44</span></li>
+                            <li><span>Теслярі / столяри</span> <span class="number">10</span></li>
+                            <li><span>Плиточники</span> <span class="number">30</span></li>
+                            <li><span>Електрики</span> <span class="number">12</span></li>
+                            <li><span>Сантехніки</span> <span class="number">8</span></li>
+                            <li><span>Газоелектрозварювальники</span> <span class="number">4</span></li>
+                            <li><span>Монтажники ГКЛ конструкцій</span> <span class="number">20</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="stats-card management-list">
+                        <h3>Склад ІТР, чол.</h3>
+                        <ul>
+                            <li><span>Склад ІТР, чол.</span> <span class="number">24</span></li>
+                            <li><span>Керівники проекту</span> <span class="number">4</span></li>
+                            <li><span>Інженери будівельники</span> <span class="number">2</span></li>
+                            <li><span>Архітектори</span> <span class="number">6</span></li>
+                            <li><span>Конструктора</span> <span class="number">7</span></li>
+                            <li><span>Технологи</span> <span class="number">1</span></li>
+                            <li><span>Кошторисники (АВК-5)</span> <span class="number">2</span></li>
+                            <li><span>Фахівець з комп'ютерної графіки</span> <span class="number">2</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="licenses">
+        <div class="licenses-overlay">
+            <div class="container">
+                <h2>Ліцензії та сертифікати</h2>
+                <h3>ТОВ «АТОМЕНЕРГОПРОЕКТ»</h3>
+                
+                <div class="licenses-content">
+                    <div class="license-main">
+                        <h4>Ліценція Господарська діяльність з будівництва об'єктів IV та V категорій складності</h4>
+                        <h5>Види робіт</h5>
+                        <ul class="work-types-list">
+                            <li>Будівельні та монтажні роботи загального призначення</li>
+                            <li>Будівництво об'єктів інженерної інфраструктури</li>
+                            <li>Монтаж внутрішніх інженерних мереж, систем, приладів і засобів вимірювання, іншого обладнання</li>
+                            <li>Монтаж зовнішніх інженерних мереж, систем, приладів і засобів вимірювання, іншого обладнання</li>
+                            <li>Монтаж інженерних споруд</li>
+                            <li>Будівництво об'єктів транспортної інфраструктури</li>
+                        </ul>
+                    </div>
+
+                    <div class="certificates-grid">
+                        <div class="certificate-item">
+                            <img src="assets/images/technical/43.png" alt="Сертифікат 1" class="certificate-image modal-trigger">
+                        </div>
+                        <div class="certificate-item">
+                            <img src="assets/images/technical/44.jpg" alt="Сертифікат 2" class="certificate-image modal-trigger">
+                        </div>
+                        <div class="certificate-item">
+                            <img src="assets/images/technical/45.png" alt="Сертифікат 3" class="certificate-image modal-trigger">
+                        </div>
+                        <div class="certificate-item">
+                            <img src="assets/images/technical/53.jpg" alt="Сертифікат 4" class="certificate-image modal-trigger">
+                        </div>
+                        <div class="certificate-item">
+                            <img src="assets/images/technical/54.jpg" alt="Сертифікат 5" class="certificate-image modal-trigger">
+                        </div>
+                        <div class="certificate-item">
+                            <img src="assets/images/technical/55.jpg" alt="Сертифікат 6" class="certificate-image modal-trigger">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
-            <img src="logo.png" alt="АТОМ ЕНЕРГО ПРОЕКТ" class="footer-logo">
+            <img src="assets/images/logo/logo.png" alt="АТОМ ЕНЕРГО ПРОЕКТ" class="footer-logo">
         </div>
     </footer>
 
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage">
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Add clickable class to all images that should be zoomable
+            document.querySelectorAll('.turbine-item img, .certificate-image, .drawing-item img, .equipment-item img, .technical-image').forEach(img => {
+                img.classList.add('clickable-image');
+            });
+
+            // Get the modal
+            var modal = document.getElementById('imageModal');
+            var modalImg = document.getElementById('modalImage');
+            var closeBtn = document.querySelector('.modal-close');
+
+            // Get all images with clickable-image class
+            var images = document.getElementsByClassName('clickable-image');
+
+            // Add click event to all images
+            for (var i = 0; i < images.length; i++) {
+                images[i].onclick = function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            // Close button
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+                document.body.style.overflow = '';
+            }
+
+            // Click outside to close
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    document.body.style.overflow = '';
+                }
+            }
+
+            // Close on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === "Escape") {
+                    modal.style.display = "none";
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Table sections toggle
             const sections = document.querySelectorAll('.table-section');
             
             sections.forEach(section => {
                 const header = section.querySelector('h3');
                 const table = section.querySelector('table');
                 
-                // Initially show the first section
                 if (section === sections[0]) {
                     table.classList.add('show');
                 } else {
@@ -450,12 +946,32 @@
                 }
                 
                 header.addEventListener('click', () => {
-                    const isCollapsed = header.classList.contains('collapsed');
-                    
-                    // Toggle current section
                     header.classList.toggle('collapsed');
                     table.classList.toggle('show');
                 });
+            });
+
+            // Intersection Observer for animations
+            const animatedElements = document.querySelectorAll('.license-main, .certificate-item, .stats-card, .equipment-item, .drawing-item');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const animationObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            animatedElements.forEach(element => {
+                element.classList.add('will-animate');
+                animationObserver.observe(element);
             });
         });
     </script>
