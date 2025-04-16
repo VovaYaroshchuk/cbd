@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТОВ «АТОМЕНЕРГОПРОЕКТ»</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .table-section {
+            margin-bottom: 20px;
+        }
+        
+        .table-section h3 {
+            cursor: pointer;
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border-radius: 4px 4px 0 0;
+            margin-bottom: 0;
+            position: relative;
+            transition: background-color 0.3s;
+            font-weight: normal;
+        }
+        
+        .table-section h3:hover {
+            background-color: #444;
+        }
+        
+        .table-section h3::after {
+            content: '▼';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+        
+        .table-section h3.collapsed::after {
+            transform: translateY(-50%) rotate(-90deg);
+        }
+        
+        .table-section table {
+            display: none;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+        
+        .table-section table.show {
+            display: table;
+        }
+        
+        .table-section table th,
+        .table-section table td {
+            border: 1px solid #333;
+            padding: 12px;
+            text-align: left;
+            color: #fff;
+        }
+        
+        .table-section table th {
+            background-color: #1a1a1a;
+            font-weight: normal;
+            color: #999;
+            border-bottom: 1px solid #333;
+        }
+        
+        .table-section table td {
+            background-color: #1a1a1a;
+        }
+        
+        .table-section table tr:hover td {
+            background-color: #262626;
+        }
+        
+        .work-table {
+            background-color: #1a1a1a;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ТОВ «АТОМЕНЕРГОПРОЕКТ»</h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="logo.png" alt="АТОМ ЕНЕРГО ПРОЕКТ" class="logo">
+            </div>
+            <div class="hero-text">
+                <h2>БУДІВНИЦТВО</h2>
+                <h2>ВІТРОЕЛЕКТРОСТАНЦІЙ</h2>
+            </div>
+        </div>
+    </section>
+
+
+    <main>
+        <div class="container">
+            <section class="services-grid">
+                <div class="services-list">
+                    <h2>ПОСЛУГИ:</h2>
+                    <ul>
+                        <li>Генпідрядні</li>
+                        <li>Субпідрядні</li>
+                        <li>Транспортні</li>
+                        <li>Спецтехніка</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Ремонтні роботи</h3>
+                    <p>під ключ</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Будівництво</h3>
+                    <p>котеджних містечок</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Будівництво</h3>
+                    <p>нежитлових будівель та споруд</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Девелопмент</h3>
+                </div>
+            </section>
+        </div>
+    </main>
+    <section class="wind-map">
+        <div class="container">
+            <div class="wind-map-content">
+                <div class="wind-map-text">
+                    <h2>Місцевість для вітряків</h2>
+                    <p>Найкращими регіонами для ВЕС є приморська та гірська місцевість.</p>
+                    <p>ТОВ «Атоменергопроект» брало участь у будівництві ВЕС у Запорізькій та Одеській областях України.</p>
+                </div>
+                <div class="wind-map-image">
+                    <div class="map-container">
+                        <img src="/ukraine-wind-map.png" alt="Карта вітрових електростанцій України" class="ukraine-map">
+                        <div class="map-legend">
+                            <p>Вітрові станції України, станом на кінець 2021 року</p>
+                            <div class="legend-items">
+                                <div class="legend-group">
+                                    <ol start="1">
+                                        <li>Вітротурбіна Bonus, Київська обл.</li>
+                                        <li>ВЕС Старий Самбір 1, Львівська обл.</li>
+                                        <li>ВЕС Старий Самбір 2, Львівська обл.</li>
+                                        <li>Зборівська ВЕС, Тернопільська обл.</li>
+                                        <li>ВЕС Біоенергопродукт, Тернопільська обл.</li>
+                                        <li>ВЕС Шевченкове-1 (перша черга), Івано-Франківська обл.</li>
+                                        <li>ВЕС Овід Вінд, Одеська обл.</li>
+                                        <li>Дністровська ВЕС, Одеська обл.</li>
+                                        <li>ВЕС Южне Енерджі, Одеська обл.</li>
+                                        <li>Вітряний парк Очаківський, Миколаївська обл.</li>
+                                        <li>Вітряний парк Благодатний, Миколаївська обл.</li>
+                                    </ol>
+                                </div>
+                                <div class="legend-group">
+                                    <ol start="12">
+                                        <li>Вітряний парк Причорноморський, Миколаївська обл.</li>
+                                        <li>Вітряний парк Південний, Миколаївська обл.</li>
+                                        <li>Вітряний парк Щасливий, Миколаївська обл.</li>
+                                        <li>Вітряний парк Швидкий, Миколаївська обл.</li>
+                                        <li>ВЕС «ТОВ Сінга Енерджі», Миколаївська обл.</li>
+                                        <li>Новоросійська ВЕС, Херсонська обл.</li>
+                                        <li>ВЕС Ставки, Херсонська обл.</li>
+                                        <li>ВЕС Берегова, Херсонська обл.</li>
+                                        <li>Новотроїцька ВЕС, Херсонська обл.</li>
+                                        <li>Овер'янівська ВЕС, Херсонська обл.</li>
+                                        <li>Мирненська ВЕС, Херсонська обл.</li>
+                                        <li>Сиваська ВЕС (2006 р), Херсонська обл.</li>
+                                    </ol>
+                                </div>
+                                <div class="legend-group">
+                                    <ol start="24">
+                                        <li>Сиваська ВЕС (2019 р), Херсонська обл.</li>
+                                        <li>Ботієвська ВЕС, Запорізька обл.</li>
+                                        <li>ВЕС Приморська 1, Запорізька обл.</li>
+                                        <li>ВЕС Приморська 2, Запорізька обл.</li>
+                                        <li>Орлівська ВЕС, Запорізька обл.</li>
+                                        <li>Запорізька ВЕС, Запорізька обл.</li>
+                                        <li>Краматорська ВЕС, Донецька обл.</li>
+                                        <li>ВЕО Вітроенергопром, Донецька обл.</li>
+                                        <li>Вітряний парк Новоазовський, Донецька обл.</li>
+                                        <li>Вітряний парк Краснодонський, Луганська обл.</li>
+                                        <li>Вітряний парк Лутугінський, Луганська обл.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="work-complex">
+        <div class="container">
+            <h2>Комплекс робіт з встановлення вітрогенераторів 4 шт в Одеській області</h2>
+            
+            <div class="work-table">
+                <div class="table-section">
+                    <h3>Підготовчі роботи</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Найменування</th>
+                                <th>Один. Вим.</th>
+                                <th>Кількість</th>
+                                <th>Примітки</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Нанесення проекту на місцевість геодезична посадка</td>
+                                <td>комплекс</td>
+                                <td>4</td>
+                                <td>Нанесення робочих точок паль та контуру фундаменту</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Перевірка ґрунтів геологія</td>
+                                <td>комплекс</td>
+                                <td>4</td>
+                                <td>Перевірка ґрунтів в місцях буріння паль та центральної частини</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Буріння паль (проведення випробувань паль)</td>
+                                <td>шт</td>
+                                <td>16</td>
+                                <td>Буріння паль та випробування паль на динамічні та статичні навантаження</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-section">
+                    <h3>Земельні роботи</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Розробка ґрунту під площу забудови з підсипними частинами використовуючи екскаватора-навантажувача JCB 4CX</td>
+                                <td>м²</td>
+                                <td>3136</td>
+                                <td>Підготовка площадки для проведення робіт, вирівнювання під робочу відмітку</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Буріння паль відносно проекту з врахування корегувань відносно ґрунту (БУРОНАБИВНІ ПАЛІ D=1020мм H=28000мм ) застосування гідравлічний бурильний верстат RCQ560</td>
+                                <td>шт</td>
+                                <td>96</td>
+                                <td>Проведення бурових робіт дизельною станцію на глубину 28 м</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Армування каркасів паль та бетонування</td>
+                                <td>м³</td>
+                                <td>331296</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Зачищення верхівок паль до проектної висоти</td>
+                                <td>шт</td>
+                                <td>96</td>
+                                <td>Проведення робіт з зачистки паль під проектну висоту та очищення випусків від бетону</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Улаштування піщано-щебеневого шару з пошаровим ущільненням та накриттям геотекстилю та ґрунт</td>
+                                <td>м²</td>
+                                <td>2304</td>
+                                <td>Закриття ґрунту геотекстилем та засипати пошарово пісок та щебінь з ущільненням для досягнення щільності основи</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Бетонування підбетонки 100 мм</td>
+                                <td>м²</td>
+                                <td>2304</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Прокладання інженерних футлярів (Прокладання кабельної продукції в футлярі)</td>
+                                <td>комплекс</td>
+                                <td>4</td>
+                                <td>Прокладання кабельної продукції в футлярах до центру для подальшого прокладання</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-section">
+                    <h3>Бетонні роботи</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Геодезична розмітка фундаменту та анкерного каркасу</td>
+                                <td>комплекс</td>
+                                <td>4</td>
+                                <td>Розмітка Посадки анкерного каркасу та границь фундаменту</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Монтаж в приямок Анкерного каркасу вітрогенератора</td>
+                                <td>шт</td>
+                                <td>4</td>
+                                <td>Збір та монтаж анкерного каркасу який служить закладною для монтажу башти вітряка</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Армування каркасу фундаментної плити «стирьох рівневий каркас з посиленням</td>
+                                <td>м³</td>
+                                <td>9072</td>
+                                <td>Армування згідно проекту з врахуванням посилень</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Монтаж закладних деталей та випусків</td>
+                                <td>шт</td>
+                                <td>224</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Монтаж полоси заземлення</td>
+                                <td>м.п</td>
+                                <td>960</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Монтаж опалубочних конструкцій з розкріпленням</td>
+                                <td>м³</td>
+                                <td>9072</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Бетонування Фундаменту (Бетон С30/35 гідрофобна присадка)</td>
+                                <td>м³</td>
+                                <td>9072</td>
+                                <td>Виконати бетонування з врахуванням погодних умов, використання добавки для максимального ущільнення бетонної суміші</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Демонтаж опалубочних елементів</td>
+                                <td>Комплекс</td>
+                                <td>4</td>
+                                <td>Після набуття властивостей бетону проводиться демонтаж опалубочних елементів. Проводиться експертиза бетоного виробу</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-section">
+                    <h3>Монтаж вітрогенератора</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Збір крану для монтажу</td>
+                                <td>дні</td>
+                                <td>28</td>
+                                <td>Збір крану на місці монтажу( проведення розрахунку вантажо підйомності та висоти підйому)</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Монтаж башти сегментами 108м на болтове з'єднання (Закріплення основи до Анкерного каркасу та з'єднання модулів по 12м</td>
+                                <td>шт</td>
+                                <td>36</td>
+                                <td>Кріплення низу башти до анкерногокаркасу використовуючи гідроверт високої потужності та перевірка затягування динамометричним ключем. Монтаж подальших модулів проводиться за допомогою крану та кріпиться за середини башти</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Монтаж гондоли на верхівку башти на болтове з'єднання</td>
+                                <td>шт</td>
+                                <td>4</td>
+                                <td>Проводиться монтаж краном, після монтажж перевіряється обладнання</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Монтаж ковпака ротором до гондоли за допомогою болтового з'єднання</td>
+                                <td>шт</td>
+                                <td>4</td>
+                                <td>Монтується до гондоли за допомогою крану. Проводиться перевірка ротора</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Монтаж лопастей гвинта за допомогою болтового з'єднання</td>
+                                <td>шт</td>
+                                <td>12</td>
+                                <td>Монтаж проводиться краном всі елементи кріплення проходять випробування</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Монтаж додаткового обладнання</td>
+                                <td>комплекс</td>
+                                <td>4</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Проведення робіт з пусконалагодження вітрогенератора</td>
+                                <td>комплекс</td>
+                                <td>4</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img src="logo.png" alt="АТОМ ЕНЕРГО ПРОЕКТ" class="footer-logo">
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.table-section');
+            
+            sections.forEach(section => {
+                const header = section.querySelector('h3');
+                const table = section.querySelector('table');
+                
+                // Initially show the first section
+                if (section === sections[0]) {
+                    table.classList.add('show');
+                } else {
+                    header.classList.add('collapsed');
+                }
+                
+                header.addEventListener('click', () => {
+                    const isCollapsed = header.classList.contains('collapsed');
+                    
+                    // Toggle current section
+                    header.classList.toggle('collapsed');
+                    table.classList.toggle('show');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
