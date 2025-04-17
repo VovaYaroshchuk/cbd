@@ -847,56 +847,43 @@ footer {
 }
 
 /* Licenses Section */
-.licenses-tab {
+.licenses {
     position: relative;
     background: #fff;
     padding: 60px 0;
-    opacity: 0;
-    animation: fadeIn 0.6s ease-out forwards;
 }
 
-.licenses-tab .container {
+.licenses .container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 40px;
 }
 
-.licenses-tab h2 {
-    font-size: 48px;
+.licenses h2 {
+    font-size: 42px;
     font-weight: 700;
     margin-bottom: 20px;
-    opacity: 0;
-    animation: slideUp 0.6s ease-out 0.2s forwards;
+    color: var(--primary-black);
 }
 
-.licenses-tab h3 {
+.licenses h3 {
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 60px;
-    opacity: 0.7;
-    opacity: 0;
-    animation: slideUp 0.6s ease-out 0.3s forwards;
+    color: var(--medium-gray);
 }
 
 .licenses-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    opacity: 0;
-    animation: fadeIn 0.6s ease-out 0.4s forwards;
 }
 
 .license-main {
-    background: #f8f8f8;
+    background: var(--off-white);
     border-radius: 12px;
     padding: 40px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.license-main:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .license-main h4 {
@@ -904,12 +891,14 @@ footer {
     font-weight: 600;
     margin-bottom: 40px;
     line-height: 1.4;
+    color: var(--primary-black);
 }
 
 .license-main h5 {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 20px;
+    color: var(--primary-black);
 }
 
 .work-types-list {
@@ -924,27 +913,7 @@ footer {
     margin-bottom: 20px;
     padding-left: 24px;
     position: relative;
-    transition: transform 0.3s ease;
-}
-
-.work-types-list li:hover {
-    transform: translateX(5px);
-}
-
-.work-types-list li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: currentColor;
-    transition: transform 0.3s ease;
-}
-
-.work-types-list li:hover::before {
-    transform: scale(1.5);
+    color: var(--medium-gray);
 }
 
 .certificates-grid {
@@ -988,71 +957,87 @@ footer {
     transform: scale(1.02);
 }
 
-/* Modal styles */
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
     z-index: 9999;
-    padding-top: 50px;
+    padding: 50px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9);
-}
-
-.modal.show {
-    display: block !important;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: auto;
 }
 
 .modal-content {
+    position: relative;
+    background-color: transparent;
     margin: auto;
-    display: block;
-    width: 80%;
+    padding: 0;
+    width: 90%;
     max-width: 1200px;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .modal-close {
     color: #fff;
+    position: absolute;
+    right: 25px;
+    top: 10px;
     font-size: 35px;
     font-weight: bold;
-    position: absolute;
-    right: 35px;
-    top: 15px;
     cursor: pointer;
 }
 
-.modal-close:hover {
+.modal-close:hover,
+.modal-close:focus {
     color: #999;
-}
-
-#modalImage {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 90vh;
-}
-
-.clickable-image {
+    text-decoration: none;
     cursor: pointer;
 }
 
+/* Add cursor pointer to all clickable images */
+.modal-trigger {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.modal-trigger:hover {
+    transform: scale(1.02);
+}
+
+/* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
+    }
+    
+    .modal {
+        padding: 20px;
+    }
+    
+    .modal-close {
+        right: 15px;
+        top: 5px;
     }
 }
 
 /* Media Queries */
 @media (max-width: 1200px) {
-    .licenses-tab .container {
+    .licenses .container {
         padding: 0 30px;
     }
 }
 
 @media (max-width: 1024px) {
-    .licenses-tab .container {
+    .licenses .container {
         padding: 0 24px;
     }
     
@@ -1063,19 +1048,19 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .licenses-tab {
+    .licenses {
         padding: 40px 0;
     }
 
-    .licenses-tab .container {
+    .licenses .container {
         padding: 0 20px;
     }
     
-    .licenses-tab h2 {
+    .licenses h2 {
         font-size: 32px;
     }
     
-    .licenses-tab h3 {
+    .licenses h3 {
         font-size: 24px;
         margin-bottom: 40px;
     }
@@ -1090,7 +1075,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .licenses-tab .container {
+    .licenses .container {
         padding: 0 16px;
     }
     
@@ -1115,9 +1100,9 @@ footer {
 
 /* Prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
-    .licenses-tab,
-    .licenses-tab h2,
-    .licenses-tab h3,
+    .licenses,
+    .licenses h2,
+    .licenses h3,
     .licenses-content,
     .certificate-item {
         animation: none !important;
@@ -1330,7 +1315,26 @@ footer {
     transition: transform 0.3s ease;
 }
 
+/* Застосовуємо трансформацію до всіх зображень в секції construction-stages, крім секції встановлення турбіни */
+.construction-stages .technical-drawings .technical-image {
+    transform: rotate(180deg) scaleX(-1);
+}
+
+.construction-stages .turbine-installation .technical-image {
+    transform: none;
+}
+
 .drawing-item:hover .technical-image {
+    transform: scale(1.02);
+}
+
+/* Зберігаємо трансформацію при наведенні для перевернутих зображень */
+.construction-stages .technical-drawings .drawing-item:hover .technical-image {
+    transform: rotate(180deg) scaleX(-1) scale(1.02);
+}
+
+/* Окремий ефект наведення для зображень турбіни */
+.construction-stages .turbine-installation .drawing-item:hover .technical-image {
     transform: scale(1.02);
 }
 
@@ -1454,67 +1458,6 @@ footer {
     height: 6px;
     border-radius: 50%;
     background: var(--primary-black);
-}
-
-/* Modal Window */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(5px);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.modal.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal img {
-    max-width: 90%;
-    max-height: 90vh;
-    border-radius: 8px;
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
-    cursor: default;
-}
-
-.modal.active img {
-    transform: scale(1);
-}
-
-.modal-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid #fff;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 24px;
-}
-
-.modal-close:hover {
-    background: #fff;
-    color: #000;
-    transform: rotate(90deg);
 }
 
 /* Media Queries */
