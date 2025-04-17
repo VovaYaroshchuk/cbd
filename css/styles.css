@@ -847,26 +847,26 @@ footer {
 }
 
 /* Licenses Section */
-.licenses {
+.licenses-overlay {
     position: relative;
     background: #fff;
     padding: 60px 0;
 }
 
-.licenses .container {
+.licenses-overlay .container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 40px;
 }
 
-.licenses h2 {
+.licenses-overlay h2 {
     font-size: 42px;
     font-weight: 700;
     margin-bottom: 20px;
     color: var(--primary-black);
 }
 
-.licenses h3 {
+.licenses-overlay h3 {
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 60px;
@@ -1031,13 +1031,13 @@ footer {
 
 /* Media Queries */
 @media (max-width: 1200px) {
-    .licenses .container {
+    .licenses-overlay .container {
         padding: 0 30px;
     }
 }
 
 @media (max-width: 1024px) {
-    .licenses .container {
+    .licenses-overlay .container {
         padding: 0 24px;
     }
     
@@ -1048,19 +1048,19 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .licenses {
+    .licenses-overlay {
         padding: 40px 0;
     }
 
-    .licenses .container {
+    .licenses-overlay .container {
         padding: 0 20px;
     }
     
-    .licenses h2 {
+    .licenses-overlay h2 {
         font-size: 32px;
     }
     
-    .licenses h3 {
+    .licenses-overlay h3 {
         font-size: 24px;
         margin-bottom: 40px;
     }
@@ -1075,7 +1075,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .licenses .container {
+    .licenses-overlay .container {
         padding: 0 16px;
     }
     
@@ -1100,9 +1100,9 @@ footer {
 
 /* Prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
-    .licenses,
-    .licenses h2,
-    .licenses h3,
+    .licenses-overlay,
+    .licenses-overlay h2,
+    .licenses-overlay h3,
     .licenses-content,
     .certificate-item {
         animation: none !important;
@@ -1300,19 +1300,12 @@ footer {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.drawing-item:hover {
-    transform: translateY(-5px);
 }
 
 .technical-image {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
 }
 
 /* Застосовуємо трансформацію до всіх зображень в секції construction-stages, крім секції встановлення турбіни */
@@ -1320,12 +1313,9 @@ footer {
     transform: rotate(180deg) scaleX(-1);
 }
 
+/* Скасовуємо трансформацію для зображень в секції встановлення турбіни */
 .construction-stages .turbine-installation .technical-image {
-    transform: none;
-}
-
-.drawing-item:hover .technical-image {
-    transform: scale(1.02);
+    transform: none !important;
 }
 
 /* Зберігаємо трансформацію при наведенні для перевернутих зображень */
@@ -1335,7 +1325,7 @@ footer {
 
 /* Окремий ефект наведення для зображень турбіни */
 .construction-stages .turbine-installation .drawing-item:hover .technical-image {
-    transform: scale(1.02);
+    transform: scale(1.02) !important;
 }
 
 .drawing-caption {
